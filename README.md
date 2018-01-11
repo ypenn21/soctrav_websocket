@@ -8,8 +8,8 @@ Mysql:
 We we use mysql as the relational db.. https://www.mysql.com/downloads/
 
 Setting up Tomcat In IDE Intellji IDEA:
-https://user-images.githubusercontent.com/6451406/34809998-8de37c94-f64d-11e7-9afb-c5371fa19c12.png
+![alt text](https://user-images.githubusercontent.com/6451406/34809998-8de37c94-f64d-11e7-9afb-c5371fa19c12.png) 
 
-https://user-images.githubusercontent.com/6451406/34809983-739056c8-f64d-11e7-8733-6f7cf95cd145.png
+![alt text](https://user-images.githubusercontent.com/6451406/34809983-739056c8-f64d-11e7-8733-6f7cf95cd145.png) 
 
 
