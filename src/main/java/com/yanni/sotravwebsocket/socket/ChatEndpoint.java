@@ -2,9 +2,11 @@ package com.yanni.sotravwebsocket.socket;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
+import javax.annotation.PostConstruct;
 import javax.websocket.EncodeException;
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
@@ -18,8 +20,16 @@ import com.yanni.sotravwebsocket.model.Message;
 @ServerEndpoint(value = "/chat/{username}", decoders = MessageDecoder.class, encoders = MessageEncoder.class)
 public class ChatEndpoint {
     private Session session;
+    //need to group ChatEndpoints by chat rooms maybe use a map
     private static final Set<ChatEndpoint> chatEndpoints = new CopyOnWriteArraySet<>();
     private static HashMap<String, String> users = new HashMap<>();
+    // implement chat for separate groups.
+    private static Map<String, Set<ChatEndpoint>> chatGroups = new HashMap<>();
+
+//    @PostConstruct
+//    public void buildChatGroups(){
+//        chatGroups.put();
+//    }
 
     @OnOpen
     public void onOpen(Session session, @PathParam("username") String username) throws IOException, EncodeException {
